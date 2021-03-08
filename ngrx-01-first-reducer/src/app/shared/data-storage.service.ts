@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { map, tap } from 'rxjs/operators';
 
 import { Recipe } from '../recipes/recipe.model';
-import { RecipeService } from '../recipes/recipe.service';
 import { Store } from '@ngrx/store';
 import * as fromApp from '../store/app.reducer';
 import * as RecipesActions from '../recipes/store/recipe.actions';
@@ -12,12 +11,11 @@ import * as RecipesActions from '../recipes/store/recipe.actions';
 export class DataStorageService {
   constructor(
     private http: HttpClient,
-    private recipeService: RecipeService,
     private store: Store<fromApp.AppState>
   ) {}
 
   storeRecipes() {
-    const recipes = this.recipeService.getRecipes();
+    const recipes = new RecipesActions.FetchRecipes();
     this.http
       .put(
         'https://ng-course-recipe-book-65f10.firebaseio.com/recipes.json',
