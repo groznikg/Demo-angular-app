@@ -9,9 +9,11 @@ body {
 
 .main-header {
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     background: #2ddf5c;
     padding: 8px 16px;
-    position: fixed;
     z-index: 1;
 }
 
@@ -74,7 +76,6 @@ body {
 
 .main-footer {
     background: black;
-    color: white;
     padding: 32px;
     margin-top: 48px;
 }
@@ -86,18 +87,18 @@ body {
     text-align: center;
 }
 
-.main-footer_link {
+.main-footer__link {
     display: inline-block;
     margin: 0 16px;
 }
 
-.main-footer_link a {
+.main-footer__link a {
     color: white;
     text-decoration: none;
 }
 
-.main-footer_link a:hover,
-.main-footer_link a:active {
+.main-footer__link a:hover,
+.main-footer__link a:active {
     color: #ccc;
 }
 
@@ -107,7 +108,7 @@ body {
     font: inherit;
     border: 1.5px solid #0e4f1f;
     padding: 8px;
-    border-radius: 4px;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -116,7 +117,6 @@ body {
 .button:active {
     background: white;
     color: #0e4f1f;
-    
 }
 
 .button:focus {
