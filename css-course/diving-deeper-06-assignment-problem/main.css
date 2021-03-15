@@ -1,0 +1,24 @@
+.main-box {
+    padding: 5px 6px 7px 8px;
+    border: black solid 5px;
+    margin: 5px 6px 7px 8px;
+    display: inline-block;
+}
+
+.first-box {
+    height: 300px;
+    width: 50%;
+    display: none;
+}
+
+body {
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.second-box:hover {
+    border: red 5px solid;
+}
