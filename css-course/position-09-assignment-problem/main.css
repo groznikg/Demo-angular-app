@@ -28,6 +28,7 @@
     left: 3%;
     bottom: 5%;
     position: absolute;
+    width: 100%;
 }
 
 .plan__list {
